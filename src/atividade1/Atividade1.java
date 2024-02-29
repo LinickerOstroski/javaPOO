@@ -25,12 +25,16 @@ public class Atividade1 {
         func1.setDepartamento("TI");
         func1.setDataEntradaBanco("15/02/2020");
         
+        /*
         System.out.println("Funcionario:" + func1.getNome());
         System.out.println(func1.getRg());
         System.out.println(func1.getSalario());
         System.out.println(func1.getDepartamento());
         System.out.println(func1.getDataEntradaBanco());
         System.out.println(func1.isAtivo());
+        */
+        
+        func1.mostra();
         
         func1.bonifica(5000);
         

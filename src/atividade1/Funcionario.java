@@ -70,5 +70,15 @@ public class Funcionario {
     public void demite() {
         this.ativo = false;
     }
+    
+    
+    public void mostra(){
+        System.out.println("Funcionario: " + this.getNome());
+        System.out.println(this.getDepartamento());
+        System.out.println(this.getDataEntradaBanco());
+        System.out.println(this.getRg());
+        System.out.println(this.getSalario());
+        System.out.println("Ativo:" + this.isAtivo());
+    }
 
 }
