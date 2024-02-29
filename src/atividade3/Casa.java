@@ -10,18 +10,13 @@ package atividade3;
  * @author Iksortso K2
  */
 public class Casa {
-   private boolean aberta;
-   private String cor;
-   private double dimensaoX, dimensaoY, dimensaoZ;
 
-    public boolean isAberta() {
-        return aberta;
-    }
-
-    public void setAberta(boolean aberta) {
-        this.aberta = aberta;
-    }
-
+    private String cor;
+   
+    Porta porta1 = new Porta();
+    Porta porta2 = new Porta();
+    Porta porta3 = new Porta();
+    
     public String getCor() {
         return cor;
     }
@@ -30,44 +25,22 @@ public class Casa {
         this.cor = cor;
     }
 
-    public double getDimensaoX() {
-        return dimensaoX;
+    public void pinta(String cor) {
+        this.setCor(cor);
     }
 
-    public void setDimensaoX(double dimensaoX) {
-        this.dimensaoX = dimensaoX;
-    }
-
-    public double getDimensaoY() {
-        return dimensaoY;
-    }
-
-    public void setDimensaoY(double dimensaoY) {
-        this.dimensaoY = dimensaoY;
-    }
-
-    public double getDimensaoZ() {
-        return dimensaoZ;
-    }
-
-    public void setDimensaoZ(double dimensaoZ) {
-        this.dimensaoZ = dimensaoZ;
-    }
-    
-    public void abre(){
-        this.setAberta(true);
-    }
-   
-    public void fecha(){
-        this.setAberta(false);
-    }
-   
-    public void pinta(String cor){
-        this.cor = cor;
-        System.out.println("Casa pintada para: " + cor);
-    }
-    
-    public boolean estaAberta(){
-        return this.isAberta();
+    public int quantasPortasEstaoAbertas() {
+        int quantidade = 0;
+        if (porta1.estaAberta()) {
+            quantidade = quantidade + 1;
+        }
+        if (porta2.estaAberta()) {
+            quantidade = quantidade + 1;
+        } 
+        if (porta3.estaAberta()) {
+            quantidade = quantidade + 1;
+        } 
+        System.out.println(quantidade + " portas estão abertas!");
+        return quantidade;
     }
 }
